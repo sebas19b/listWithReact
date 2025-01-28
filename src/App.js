@@ -1,10 +1,10 @@
+import React from 'react';
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoAddTaskButton } from './TodoAddTaskButton';
 import { TodoItems } from './TodoItem';
-import React from 'react';
-import './App.css';
+
 
 const listTodos = [
 {text: "Sacar la basura", completed: false},
@@ -18,7 +18,7 @@ function App() {
     <React.Fragment>
 
       <TodoCounter completed={7} total={10} />
-      <TodoSearch/>
+      <TodoSearch/><TodoAddTaskButton/>
 
       <TodoList>
         {listTodos.map(todo => (
@@ -29,9 +29,6 @@ function App() {
           />
         ))}
       </TodoList>
-
-      <TodoAddTaskButton/>
-      
     </React.Fragment>
   );
 }
