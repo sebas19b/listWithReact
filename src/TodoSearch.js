@@ -1,6 +1,10 @@
+import './css/TodoSearch.css'
+
 function TodoSearch() {
     return(
-        <input type="text" placeholder="Write task"/>
+        <div className='containerSearch'>
+            <input className='inputAddTask' type="text" placeholder="Write task"/>
+        </div>
     )
 }
 
