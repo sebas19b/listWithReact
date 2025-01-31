@@ -1,0 +1,27 @@
+.TodoAddTaskButton{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.TodoAddTaskButton button {
+    width: 20rem;
+    height: 2.5rem;
+    padding: 2px ;
+    background-color: #3498db; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px;
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.TodoAddTaskButton button:hover {
+    background-color: #2980b9; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05); /* Pequeño zoom */
+}
+
+.TodoAddTaskButton button:active {
+    transform: scale(0.95); /* Efecto de clic */
+}
