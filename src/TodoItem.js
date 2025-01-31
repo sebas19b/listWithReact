@@ -1,10 +1,14 @@
+import './css/TodoItem.css'
+
 function TodoItems(props) {
     return(
-      <li>
-        <span>v</span>
-        <p> {props.text} </p>
-        <span>x</span>
-      </li>
+      <div className='container-item'>
+        <li>
+          <input type='checkbox' className='item item-checkbox'/>   
+          <p className='item item-text item-text-completed'> {props.text} </p>          
+          <span className='item item-delete'>x</span>
+        </li>
+      </div>
     );
   }
 
