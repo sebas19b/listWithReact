@@ -1,5 +1,20 @@
+.container-item{
+    display: flex; /* Usa flexbox */
+    min-width: 288px;
+    max-width: 900px;
+    min-height: 50px;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin: 0 8rem 2rem 8rem;
+    text-align: center; /* Asegura que el texto también se centre */
+    border-radius: .5rem ;
+    background-color: rgba(219, 218, 218, .7);
+}
+    
 .container-item li{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -12,7 +27,12 @@
 }
 
 .container-item .item-checkbox{
+    font-size: 2.4rem;
+    font-weight: 700;
     cursor: pointer;
+}
+.container-item .item-checkbox--active{
+    color: rgb(37, 216, 37);
 }
 
 .container-item .item-text{
@@ -26,6 +46,9 @@
 .container-item .item-delete{
     font-size: 2.4rem;
     font-weight: 700;
-    color: red;
     cursor: pointer;
+}
+
+.container-item .item-delete:hover{
+    color: red;
 }
