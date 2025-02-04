@@ -40,7 +40,7 @@
 }
 
 .container-item .item-text-completed{
-    text-decoration: line-through;
+    text-decoration: line-through black .2rem;
 }
 
 .container-item .item-delete{
