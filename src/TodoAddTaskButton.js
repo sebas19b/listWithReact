@@ -3,7 +3,13 @@ import './css/TodoAddTaskButton.css'
 function TodoAddTaskButton() {
     return (
         <div className='TodoAddTaskButton'>
-            <button>Add Task</button>
+            <button 
+            onClick={
+                (event)=>{
+                    console.log(event.target)
+                }
+            }
+            >Add Task</button>
         </div>
     )
 }
