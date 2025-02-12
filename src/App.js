@@ -15,7 +15,7 @@ const listTodos = [
 
 function App() {
 
-  const [todos, setTodos] = React.useState(listTodos)
+  //const [todos, setTodos] = React.useState(listTodos)
 
   const taskCompleted = listTodos.filter(listTodos => listTodos.completed).length
 
