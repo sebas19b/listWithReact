@@ -1,12 +1,19 @@
 
 .containerSearch{
+    width: 100%;
+    min-width: 320px;
+    position: relative;
     display: flex;
     justify-content: center;
-    min-width: 288px;
+    text-align: center;
+    /*min-width: 288px;*/
     padding-bottom: 1rem;
 }
+
 .inputAddTask{
-    width: 30rem;
+    position: relative;
+    width: 300px;
+    min-width: 288px;
     height: 3rem;
     text-align: center;
     background: rgba(231, 226, 226, 4);
