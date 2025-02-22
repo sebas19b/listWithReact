@@ -9,30 +9,37 @@ import { TodoItems } from './TodoItem';
 const listTodos = [
 {text: "Sacar la basura", completed: false},
 {text: "Aprender react, del curso de platzi", completed: false},
-{text: "desayunar", completed: true},
+{text: "desayunar", completed: false},
 {text: "ir al trabajo", completed: false}
 ]
 
 function App() {
 
-  //const [todos, setTodos] = React.useState(listTodos)
+  const [todos, setTodos] = React.useState(listTodos)
 
-  const taskCompleted = listTodos.filter(listTodos => listTodos.completed).length
+  const taskCompleted = todos.filter(todos => todos.completed).length
 
-  const totalTask = listTodos.length
+  const totalTask = todos.length
 
   const [searchValue, setSearchValue] = React.useState("")
 
-  console.log(searchValue)
   
-  const taskSearched = listTodos.filter((todos) => {
+  const taskSearched = todos.filter((todos) => {
     return todos.text.toLowerCase().includes(searchValue.toLowerCase())
   })
+
+  const completeTask = (text) => {
+    const newTodos = [...todos]
+    const todoIndex = todos.findIndex((todo) => todo.text === text)
+    newTodos[todoIndex].completed = true
+    setTodos(newTodos)
+  }
 
   return (
     <React.Fragment>
 
       <TodoCounter completed={taskCompleted} total={totalTask} />
+
       <TodoSearch 
         searchValue={searchValue}
         setSearchValue={setSearchValue}
@@ -45,7 +52,8 @@ function App() {
             key={todo.text} 
             text={todo.text} 
             completed={todo.completed}
-          />
+            onComplete={() => completeTask(todo.text)}
+         />
         ))}
       </TodoList>
     </React.Fragment>
