@@ -35,6 +35,11 @@ function App() {
     setTodos(newTodos)
   }
 
+  const deleteTask = (text) => {
+    const newTodos = todos.filter((todo) => todo.text !== text)
+    setTodos(newTodos)
+  }
+
   return (
     <React.Fragment>
 
@@ -53,6 +58,8 @@ function App() {
             text={todo.text} 
             completed={todo.completed}
             onComplete={() => completeTask(todo.text)}
+            onDelete={() => deleteTask(todo.text)}
+
          />
         ))}
       </TodoList>
