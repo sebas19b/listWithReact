@@ -8,7 +8,9 @@ function TodoItems(props) {
           onClick={props.onComplete}  
           >✔</span>   
           <p className={`item item-text ${props.completed && "item-text-completed"}`}> {props.text} </p>          
-          <span className='item item-delete'>x</span>
+          <span className='item item-delete'
+          onClick={props.onDelete}
+          >x</span>
         </li>
       </div>
     );
